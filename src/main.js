@@ -12,7 +12,7 @@ let mainWindow;
 
 app.on('ready', function() {
     mainWindow = new BrowserWindow({width: 1360, height: 800});
-    mainWindow.loadURL(`file://${__dirname}/index.html`);
+    mainWindow.loadURL('file://${__dirname}/index.html');
     
     //mainWindow.openDevTools();
     
