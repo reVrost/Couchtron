@@ -16,6 +16,15 @@ import * as ReactDOM from "react-dom";
 
 import { Hello } from  "./components/Hello.tsx";
 
-ReactDOM.render(<Hello compiler="TypeScript" framework="React" />,
+class Greeter {
+    constructor(public greeting: string) {}
+    greet() {
+        return "<u>" + this.greeting + "</u>";
+    }
+};
+
+var greeter = new Greeter("Andrew the gay typescript-boy");
+
+ReactDOM.render(<Hello compiler={greeter.greet()} framework="React" />,
 document.getElementById("content"));
     
